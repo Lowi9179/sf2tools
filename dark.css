@@ -1,0 +1,43 @@
+body, html {
+color: #B0BEC5;
+background-color: #38373c;
+--mdc-theme-primary: #000000;
+--mdc-theme-on-primary: #B0BEC5;
+--mdc-theme-secondary: #000000;
+--mdc-theme-on-secondary: #B0BEC5;
+--mdc-theme-text-hint-on-background: #B0BEC5;
+--mdc-theme-text-hint-on-primary: #B0BEC5;
+--mdc-theme-text-hint-on-light: #B0BEC5;
+--mdc-theme-surface: #33333D;
+--mdc-theme-on-surface: #B0BEC5;
+--mdc-theme-background: #38373c;
+--ink-color: #B0BEC5;
+}
+
+.mdc-text-field{
+ink-color: #B0BEC5;
+}
+
+
+.dark {color: #FFFFFF}
+
+header,
+footer {
+	background-color: #252526;
+}
+
+.mdc-text-field-helper-text {
+    color: white;
+}
+
+mdc-top-app-bar {
+background-color: #152121;
+}
+
+mdc-theme--surface {
+background-color: #152121;
+}
+
+.mdc-theme--primary {
+    color: #252526;
+} 
