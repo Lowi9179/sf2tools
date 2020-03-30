@@ -9,6 +9,8 @@
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 	    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 	    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.js"></script>
     </head>
     <body>
     	
@@ -311,10 +313,26 @@ document.getElementById("clear").onclick = function clickclear() {
 }
 
 // Копирование кода из поля
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  onOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
 function copy(){
    var copyText = document.getElementById("rez");
    copyText.select();
    document.execCommand("copy");
+Toast.fire({
+  icon: 'success',
+  title: 'Успешно скопировано!'
+})
 }
 document.getElementById("copy").onclick = function clickcopy() {
   copy();
