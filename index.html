@@ -331,7 +331,7 @@ function copy(){
    document.execCommand("copy");
 Toast.fire({
   icon: 'success',
-  title: 'Успешно скопировано!'
+  title: '<div class="sans">Успешно скопировано!</div>'
 })
 }
 document.getElementById("copy").onclick = function clickcopy() {
@@ -393,6 +393,10 @@ input[type=file]::-webkit-file-upload-button {
   margin-right: 200px;
   width: 150px;
  }
+  .sans {
+  font-family: sans-serif;
+  text-weight: 700;
+}
   	.adding {
   margin-left: 42px;
   margin-top: 0px;
