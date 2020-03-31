@@ -1,0 +1,27 @@
+{
+	"author": "LONE DEVIL",
+	"name": "SF2 Tools",
+	"short_name": "SF2 Tools",
+	"description": "Tool pack for a game - Shadow Fight 2.",
+	"orientation": "portrait",
+	"start_url": "/sf2tools/",
+	"scope": "/sf2tools/",
+	"display": "standalone",
+	"background_color": "grey",
+	"theme_color": "black",
+	"icons": [
+		{
+			"src": "/sf2tools/logo.png",
+			"sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+			"type": "image/png"
+		}
+	],
+	"manifest_version": 2,
+	"version": "0.3.0",
+	"applications": {
+		"gecko": {
+			"id": "ff.plaguedoctor@gmail.com"
+		}
+	}
+}
+ 
