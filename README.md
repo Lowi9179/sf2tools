@@ -1,7 +1,6 @@
 # SF2 Tools
-## Go to the app: [here](https://lndvl.github.io/sf2tools/)
-
 A tool pack for a Game - Shadow Fight 2
+### Go to the app: [here](https://lndvl.github.io/sf2tools/)
 
 - **Current version:** 0.3.3
 - **Max game version:** 1.9.21
