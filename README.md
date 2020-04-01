@@ -1,6 +1,6 @@
 # SF2 Tools
 ### Go to the app: [here](https://lndvl.github.io/sf2tools/)
-[![Releases](https://img.shields.io/github/v/release/lndvl/sf2tools.svg)](https://github.com/lndvl/sf2tools/releases/latest)
+[![Releases](https://img.shields.io/github/v/release/lndvl/sf2tools?include_prereleases)](https://github.com/lndvl/sf2tools/releases/latest)
 
 A tool pack for a Game - Shadow Fight 2
 
