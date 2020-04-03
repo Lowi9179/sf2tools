@@ -87,9 +87,15 @@ This web application allows you to quickly work with modifications of the game. 
 <div class="desc">
 <b><h3>Application Developer - LONE DEVIL</h3></b>
 </div>
+<div class="inline">
 <form action="https://vk.com/lone_devil">
 <button class="mdc-button mdc-button--raised first">  <span class="mdc-button__ripple"></span> AUTHOR IN VK</button>
 </form>
+<div class="none">
+<form action="https://www.youtube.com/channel/UCq1Sdo1yoFDrKJJoU8HYEgA">
+<button class="mdc-button mdc-button--raised second">  <span class="mdc-button__ripple"></span> AUTHOR YOUTUBE</button>
+</form>
+</div>
 </div>
     </main>
       </div>
@@ -123,6 +129,12 @@ This web application allows you to quickly work with modifications of the game. 
  </html>
  <style>
 .first {margin-left: 10px}
+@media screen and (min-width:10px) and (max-width: 360px) {
+.second {margin-left: 15px}
+}
+@media screen and (min-width:361px) and (max-width: 1080px) {
+.second {margin-left: 20px}
+}
 .desc {font-family: 'Roboto'}
 .icons {
 text-decoration: none;
@@ -132,4 +144,10 @@ color: white;
   position: absolute;
 }
 h2 {font-family: 'Roboto'}
+.inline {
+float: left;
+center;]
+.none {
+float: none;
+} 
 </style>
