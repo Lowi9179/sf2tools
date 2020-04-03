@@ -13,6 +13,11 @@ background-color: #38373c;
 --mdc-theme-background: #38373c;
 --ink-color: #B0BEC5;
 }
+.icons {
+text-decoration: none;
+color: #B0BEC5;
+}
+
 
 .mdc-text-field{
 ink-color: #B0BEC5;
