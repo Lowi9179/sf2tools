@@ -1,0 +1,118 @@
+<html>
+	<head>
+<!-- Мета-строки и подключение библиотек -->
+        <title>SF2 Tools - About</title>
+	    <meta name="theme-color" content="#6200ED">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+	    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    </head>
+    <body>
+    	
+  <aside class="mdc-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__header">
+    <h3 class="mdc-drawer__title">SF2 Tools</h3>
+    <h6 class="mdc-drawer__subtitle">A tool pack for a game</h6>
+  </div>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+      <h6 class="mdc-list-group__subheader">Model Tools</h6>
+      <a class="mdc-list-item" href="index.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Node Tool</span>
+      </a>
+      <a class="mdc-list-item" href="edges.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Edge Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Capsule Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Triangle Tool</span>
+      </a>
+
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">Stages Tools</h6>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Template Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Fight Tool</span>
+      </a>
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">List Tools</h6>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Equipment Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Consumable Tool</span>
+      </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+  
+  <div class="mdc-drawer-app-content">
+  	
+<header class="mdc-top-app-bar mdc-top-app-bar--short" id="app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" href="#">menu</button>
+      <span class="mdc-top-app-bar__title">SF2 Tools</span>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="About" href="index.html">info</button>
+    </section>
+  </div>
+</header>
+    <main class="mdc-top-app-bar--fixed-adjust">
+<h2>Application info</h2><br/>
+This web application allows you to quickly work with modifications of the game. For example, in Node Tool the application will calculate everything LCC in your node. In other tools, the application will save you time to create code, because the program will do everything by itself. For greater convenience, it is recommended to install WebAPK.<br/>
+<h2>Developer</h2><br/>
+<b>LONE
+    </main>
+      </div>
+<script src="darkmode.js"></script> 
+<script>
+// Настройки DarkModeJS
+  var options = {
+    light: "light.css",
+    dark: "dark.css",
+    startAt: "01:00",
+    endAt: "23:00",
+    checkSystemScheme: true,
+    saveOnToggle: true
+  };
+  var DarkMode = new DarkMode(options);
+//  var ModeToggler = document.getElementById('theme')
+	//  ModeToggler.onclick = function() {
+//      DarkMode.toggleMode()
+//    }
+
+// Создание отдельных компонентов отображаемых на сайте
+	const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+	const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+	const listEl = document.querySelector('.mdc-drawer .mdc-list');
+	topAppBar.listen('MDCTopAppBar:nav', () => {
+	  drawer.open = !drawer.open;
+	});
+    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+</script>
+ </body>
+ </html>
+ <style>
+.app-bar {
+  position: absolute;
+}
+</style>
