@@ -2,46 +2,6 @@ body, html {
 color: white;
 background-color: #38373c;
 --mdc-theme-primary: #000000;
---mdc-theme-on-primary: white;
---mdc-theme-secondary: #000000;
---mdc-theme-on-secondary: white;
---mdc-theme-text-hint-on-background: white;
---mdc-theme-text-hint-on-primary: white;
---mdc-theme-text-hint-on-light: white;
---mdc-theme-surface: #33333D;
---mdc-theme-on-surface: white;
---mdc-theme-background: #38373c;
---ink-color: white;
-}
-
-.mdc-text-field{
-ink-color: #B0BEC5;
-}
-
-
-.dark {color: #FFFFFF}
-
-header,
-footer {
-	background-color: #252526;
-}
-
-.mdc-text-field-helper-text {
-    color: white;
-}
-
-mdc-top-app-bar {
-background-color: #152121;
-}
-
-mdc-theme--surface {
-background-color: #152121;
-}
-
-.mdc-theme--primary {
-    color: #252526;
-} -color: #38373c;
---mdc-theme-primary: #000000;
 --mdc-theme-on-primary: #B0BEC5;
 --mdc-theme-secondary: #000000;
 --mdc-theme-on-secondary: #B0BEC5;
@@ -53,6 +13,7 @@ background-color: #152121;
 --mdc-theme-background: #38373c;
 --ink-color: #B0BEC5;
 }
+
 
 .mdc-text-field{
 ink-color: #B0BEC5;
