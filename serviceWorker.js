@@ -18,7 +18,10 @@ var urlsToCache = [
    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
    'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
 	'/sf2tools/js/webapk.js',
-   'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'
+   'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css',
+   'https://fonts.googleapis.com/icon?family=Material+Icons',
+   'https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.css',
+   'https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.js'
 ];
 var urlsNotToCache = [
 	// Urls that don't need to be cached can be added here explicitly
