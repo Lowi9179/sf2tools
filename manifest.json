@@ -7,8 +7,8 @@
 	"start_url": "/sf2tools/",
 	"scope": "/sf2tools/",
 	"display": "standalone",
-	"background_color": "grey",
-	"theme_color": "black",
+	"background_color": "#6200ED",
+	"theme_color": "#6200ED",
 	"icons": [
 		{
 			"src": "/sf2tools/logo.png",
