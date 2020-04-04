@@ -21,6 +21,7 @@ var urlsToCache = [
    'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css',
    'https://fonts.googleapis.com/icon?family=Material+Icons',
    'https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.css',
+   'https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2',
    'https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.js'
 ];
 var urlsNotToCache = [
