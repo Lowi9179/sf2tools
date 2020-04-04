@@ -15,7 +15,10 @@ var urlsToCache = [
    '/sf2tools/darkmode.js',
 	'/sf2tools/dark.css',
    '/sf2tools/light.css',
+   'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
+   'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js',
 	'/sf2tools/js/webapk.js'
+   'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css',
 ];
 var urlsNotToCache = [
 	// Urls that don't need to be cached can be added here explicitly
