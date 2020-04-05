@@ -92,8 +92,9 @@ This web application allows you to quickly work with modifications of the game. 
 <form action="https://vk.com/lone_devil">
 <button class="mdc-button mdc-button--raised contact">  <span class="mdc-button__ripple"></span> AUTHOR IN VK</button>
 </form>
-<button>install</button>
-<center>
+<h2>Extra</h2>
+<button id="theme" class="mdc-button mdc-button--raised contact">  <span class="mdc-button__ripple"></span> DARK THEME (BETA)</button>
+</center>
     </main>
       </div>
 <script src="darkmode.js"></script> 
@@ -108,10 +109,10 @@ This web application allows you to quickly work with modifications of the game. 
     saveOnToggle: true
   };
   var DarkMode = new DarkMode(options);
-//  var ModeToggler = document.getElementById('theme')
-	//  ModeToggler.onclick = function() {
-//      DarkMode.toggleMode()
-//    }
+  var ModeToggler = document.getElementById('theme')
+	  ModeToggler.onclick = function() {
+      DarkMode.toggleMode()
+    }
 
 // Создание отдельных компонентов отображаемых на сайте
 	const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
