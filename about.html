@@ -98,10 +98,54 @@ This web application allows you to quickly work with modifications of the game. 
 <button id="theme" class="mdc-button mdc-button--raised contact">  <span class="mdc-button__ripple"></span> DARK THEME (BETA)</button><br/><br/>
 <button id="webapk" class="mdc-button mdc-button--raised contact">  <span class="mdc-button__ripple"></span> INSTALL WEBAPK</button>
 </center>
+<a href="#" id="dialog-login">Open Delivery Dialog</a>
+<aside id="mdc-dialog-delivery-condition"
+  class="mdc-dialog js--mdc-delivery-condition"
+  role="alertdialog"
+  aria-labelledby="mdc-delivery-condition-label"
+  aria-describedby="mdc-delivery-condition-description">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-delivery-condition-label" class="mdc-dialog__header__title">
+        [Delivery]
+      </h2>
+    </header>
+    <section id="mdc-delivery-condition-description" class="mdc-dialog__body">
+      [TEXT]
+    </section>
+    <footer class="mdc-dialog__footer">
+      <button type="button" class="mdc-button mdc-dialog__footer__button--cancel">Close</button>
+    </footer>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside>
     </main>
       </div>
 <script src="darkmode.js"></script> 
 <script>
+const dialogEls = Array.from(document.querySelectorAll('.mdc-dialog'));
+
+dialogEls.forEach((ele) => {
+  const dialog = new mdc.dialog.MDCDialog(ele);
+
+  dialog.listen('MDCDialog:accept', function() {
+    console.log('accepted');
+  })
+
+  dialog.listen('MDCDialog:cancel', function() {
+    console.log('canceled');
+  })
+
+  // From here I do not know how to continue....
+  // Here the selector '#dialog-login' should still be dynamic
+  document.querySelector('#dialog-login').addEventListener('click', function (evt) {
+    event.preventDefault(evt);
+    dialog.lastFocusedTarget = evt.target;
+    // This shows all dialogs, which is wrong.
+    dialog.show();
+  })
+});
+
 // Настройки DarkModeJS
   var options = {
     light: "light.css",
