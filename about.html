@@ -99,6 +99,28 @@ This web application allows you to quickly work with modifications of the game. 
 <button id="webapk" class="mdc-button mdc-button--raised contact">  <span class="mdc-button__ripple"></span> INSTALL WEBAPK</button>
 </center>
 <a href="#" id="dialog-login">Open Delivery Dialog</a>
+<aside id="mdc-dialog-login"
+  class="mdc-dialog"
+  role="alertdialog"
+  aria-labelledby="mdc-dialog-login-label"
+  aria-describedby="mdc-dialog-login-description">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-login-label" class="mdc-dialog__header__title">
+        Login
+      </h2>
+    </header>
+    <section id="mdc-dialog-login-description" class="mdc-dialog__body">
+      [LOGIN FORM]
+    </section>
+    <footer class="mdc-dialog__footer">
+      <button type="button" class="mdc-button mdc-dialog__footer__button--cancel">Close</button>
+      <button type="button" class="mdc-button mdc-button--raised mdc-dialog__footer__button mdc-dialog__footer__button--accept">RegisteR</button>
+    </footer>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside>
+
 <aside id="mdc-dialog-delivery-condition"
   class="mdc-dialog js--mdc-delivery-condition"
   role="alertdialog"
