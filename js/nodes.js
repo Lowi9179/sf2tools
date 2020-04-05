@@ -1,15 +1,3 @@
-// Генерация тоста
-const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 2000,
-  timerProgressBar: true,
-  onOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-})
 // Система калькулирования и генерации кода
 function generator(){
   var x = parseInt(document.getElementById("xgen").value);
@@ -68,20 +56,3 @@ Toast.fire({
 document.getElementById("copy").onclick = function clickcopy() {
   copy();
 }
-
-// Создание отдельных компонентов отображаемых на сайте
-	const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
-	const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
-	const listEl = document.querySelector('.mdc-drawer .mdc-list');
-	topAppBar.listen('MDCTopAppBar:nav', () => {
-	  drawer.open = !drawer.open;
-	});
-  const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.type-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.code-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.hand-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.num-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.name-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.z-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.y-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
