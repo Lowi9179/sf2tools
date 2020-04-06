@@ -11,6 +11,9 @@
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 	    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 	    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.9/dist/sweetalert2.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@3.1.4/material-ui/material-ui.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.js"></script>
        <link rel="manifest" href="manifest.json">
     </head>
     <body>
@@ -103,6 +106,15 @@ This web application allows you to quickly work with modifications of the game. 
       </div>
 <script src="darkmode.js"></script> 
 <script>
+function webapk() {
+Swal.fire(
+  '<div class="desc">How to Install</div>',
+  '<div class="desc">WebAPK can only be installed from two browsers - Chrome and Samsung Internet. Click on three dots and select "Add to Home Screen", after which the download and installation will begin.'
+)
+}
+document.getElementById("webapk").onclick = function clickwebapk() {
+  webapk();
+}
 // Настройки DarkModeJS
   var options = {
     light: "light.css",
