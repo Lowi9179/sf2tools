@@ -314,21 +314,21 @@ var chbox;
 chbox=document.getElementById('checkbox-1');
 var chbox2;
 chbox2=document.getElementById('checkbox-2');
-if (chbox.checked) {
-	elseif (chbox2.checked) {
-		var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
-	}
-        else {
-        var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
-	}
-	else {
-	    elseif (chbox2.checked) {
-		var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
-	}
-        else {
-        var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
-	}
-	},
+  if (chbox.checked && chbox2.checked)
+  {
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+  }
+  else if (chbox.checked)
+  {
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+    }
+  else if (chbox2.checked)
+  {
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`; 
+  }
+  else {
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+}
 Toast.fire({
   icon: 'success',
   title: '<div class="sans">Generated!</div>'
