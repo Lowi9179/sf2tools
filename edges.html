@@ -1,0 +1,419 @@
+<html>
+	<head>
+<!-- Мета-строки и подключение библиотек -->
+        <title>SF2 Tools - Node Tool</title>
+	    <meta name="theme-color" content="#6200ED">
+	    <link rel="icon" type="image/png" href="logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+	    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@3.1.4/material-ui/material-ui.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.7/dist/sweetalert2.min.js"></script>
+    </head>
+    <body>
+    	
+  <aside class="mdc-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__header">
+    <h3 class="mdc-drawer__title">SF2 Tools</h3>
+    <h6 class="mdc-drawer__subtitle">A tool pack for a game</h6>
+  </div>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+      <h6 class="mdc-list-group__subheader">Model Tools</h6>
+      <a class="mdc-list-item mdc-list-item--activated" href="index.html" aria-current="page">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Node Tool</span>
+      </a>
+      <a class="mdc-list-item" href="edges.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Edge Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Capsule Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Triangle Tool</span>
+      </a>
+
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">Stages Tools</h6>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Template Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Fight Tool</span>
+      </a>
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">List Tools</h6>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Equipment Tool</span>
+      </a>
+      <a class="mdc-list-item" href="#">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Consumable Tool</span>
+      </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+  
+  <div class="mdc-drawer-app-content">
+  	
+<header class="mdc-top-app-bar mdc-top-app-bar--short" id="app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" href="#"><div class="icons">menu</div></button>
+      <span class="mdc-top-app-bar__title">SF2 Tools</span>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="About" href="about.html"><a class="icons" href="about.html">info</a></button>
+    </section>
+  </div>
+</header>
+    <main class="mdc-top-app-bar--fixed-adjust">
+<!-- Текстовые поля -->
+<div class="center">
+<div class="inline">
+<label class="edge-name-field mdc-text-field nam name first">
+  <div class="mdc-text-field__ripple"></div>
+  <input id="edgenamegen" class="mdc-text-field__input" value="MacroNode" type="text"
+         aria-labelledby="name-label-id"
+         aria-controls="name-helper-id"
+         aria-describedby="name-helper-id">
+  <span class="mdc-floating-label" id="name-label-id">Edge Name</span>
+  <div class="mdc-line-ripple"></div>
+</label>
+<div class="mdc-text-field-helper-line second">
+  <div class="mdc-text-field-helper-text second" id="name-helper-id" aria-hidden="true">enter name</div>
+</div> 
+</div>
+
+<div class="none">
+<label class="node-name-field mdc-text-field nam three">
+  <div class="mdc-text-field__ripple"></div>
+  <input id="nodenamegen" class="mdc-text-field__input" value="1" type="text"
+         aria-labelledby="num-label-id"
+         aria-controls="num-helper-id"
+         aria-describedby="num-helper-id">
+  <span class="mdc-floating-label" id="num-label-id">Node Name</span>
+  <div class="mdc-line-ripple"></div>
+</label>
+<div class="mdc-text-field-helper-line second">
+  <div class="mdc-text-field-helper-text second" id="num-helper-id" aria-hidden="true">enter name</div>
+</div> 
+</div>
+</div>
+
+
+<div class="center">
+<div class="inline">
+<label class="name-field mdc-text-field nam name first">
+  <div class="mdc-text-field__ripple"></div>
+  <input id="edgenumgen" class="mdc-text-field__input" value="MacroNode" type="text"
+         aria-labelledby="name-label-id"
+         aria-controls="name-helper-id"
+         aria-describedby="name-helper-id">
+  <span class="mdc-floating-label" id="name-label-id">Edge Number</span>
+  <div class="mdc-line-ripple"></div>
+</label>
+<div class="mdc-text-field-helper-line second">
+  <div class="mdc-text-field-helper-text second" id="name-helper-id" aria-hidden="true">enter number</div>
+</div> 
+</div>
+
+<div class="none">
+<label class="num-field mdc-text-field nam three">
+  <div class="mdc-text-field__ripple"></div>
+  <input id="nodefirstnumgen" class="mdc-text-field__input" value="1" type="text"
+         aria-labelledby="num-label-id"
+         aria-controls="num-helper-id"
+         aria-describedby="num-helper-id">
+  <span class="mdc-floating-label" id="num-label-id">Node Number 1</span>
+  <div class="mdc-line-ripple"></div>
+</label>
+<div class="mdc-text-field-helper-line second">
+  <div class="mdc-text-field-helper-text second" id="num-helper-id" aria-hidden="true">enter starting number</div>
+</div> 
+</div>
+</div>
+
+<div class="center">
+<div class="inline">
+<label class="hand-field mdc-text-field nam name first">
+  <div class="mdc-text-field__ripple"></div>
+  <input id="edgenumgen" class="mdc-text-field__input" value="1" type="text"
+         aria-labelledby="hand-label-id"
+         aria-controls="hand-helper-id"
+         aria-describedby="hand-helper-id">
+  <span class="mdc-floating-label" id="hand-label-id">Edge Number</span>
+  <div class="mdc-line-ripple"></div>
+</label>
+<div class="mdc-text-field-helper-line second">
+  <div class="mdc-text-field-helper-text second" id="hand-helper-id" aria-hidden="true">enter number</div>
+</div>
+</div>
+
+<div class="none">
+<label class="type-field mdc-text-field nam three">
+  <div class="mdc-text-field__ripple"></div>
+  <input id="nodefirstnumgen" class="mdc-text-field__input" value="MacroNode" type="text"
+         aria-labelledby="type-label-id"
+         aria-controls="type-helper-id"
+         aria-describedby="type-helper-id">
+  <span class="mdc-floating-label" id="type-label-id">Node Number 1</span>
+  <div class="mdc-line-ripple"></div>
+</label>
+<div class="mdc-text-field-helper-line second">
+  <div class="mdc-text-field-helper-text second" id="type-helper-id" aria-hidden="true">enter starting node</div>
+</div>
+</div>
+</div>
+
+<div class="center">
+<div class="inline">
+<!-- Кнопка генерации -->
+<button id="gen" class="mdc-button mdc-button--raised first gener dark">  <span class="mdc-button__ripple"></span> Generate</button>
+</div>
+<!-- Текстовое поле со сгенерированым кодом -->
+<div class="none">
+<div class="mdc-form-field adding">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="checkbox-2"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewBox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-2">Two hands</label>
+</div>
+</div>
+</div>
+
+<br>
+<div class="inline">
+<button id="clear" class="mdc-button mdc-button--raised first gener">  <span class="mdc-button__ripple"></span> Clear</button>
+</div>
+
+<div class="inline">
+<div class="mdc-form-field copying">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="checkbox-1"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewBox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Don't delete</label>
+</div>
+</div>
+</div>
+
+<div class="none">
+<button id="copy" class="mdc-button mdc-button--raised copying">  <span class="mdc-button__ripple"></span> Copy</button>
+</div>
+
+<br/><center><label class="code-field mdc-text-field mdc-text-field--textarea">
+<textarea name="url" id="rez" class="mdc-text-field__input dark" aria-labelledby="my-label-id" rows="8" cols="40">Here will be your generated code</textarea> 
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label class="mdc-floating-label" id="my-label-id">Code output</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</label>
+</center>
+    </main>
+      </div>
+<script src="darkmode.js"></script> 
+<script>
+// Генерация тоста
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: true,
+  onOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+  var options = {
+    light: "light.css",
+    dark: "dark.css",
+    startAt: "01:00",
+    endAt: "23:00",
+    checkSystemScheme: true,
+    saveOnToggle: true
+  };
+  var DarkMode = new DarkMode(options);
+//  var ModeToggler = document.getElementById('theme')
+	//  ModeToggler.onclick = function() {
+//      DarkMode.toggleMode()
+//    }
+// Система калькулирования и генерации кода
+/* function generator(){
+  var x = parseInt(document.getElementById("xgen").value);
+  var y = parseInt(document.getElementById("ygen").value);
+  var z = parseInt(document.getElementById("zgen").value);
+  var name = document.getElementById("namegen").value;
+  var number = parseInt(document.getElementById("numgen").value);
+  var hand = parseInt(document.getElementById("handgen").value);
+  var type = document.getElementById("typegen").value;
+  var lcc1 = z / 50;
+  var lcc2 = (x + 150) / 50;
+  var lcc4 = (y - 150) / 100;
+  var lcc3 = 1 - (lcc1 + lcc2 + lcc4);
+  var plus = number + 1;
+  var rez = document.getElementById("numgen").value = plus;
+var chbox;
+chbox=document.getElementById('checkbox-1');
+var chbox2;
+chbox2=document.getElementById('checkbox-2');
+  if (chbox.checked && chbox2.checked)
+  {
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+  }
+  else if (chbox.checked)
+  {
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+    }
+  else if (chbox2.checked)
+  {
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`; 
+  }
+  else {
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+}
+Toast.fire({
+  icon: 'success',
+  title: '<div class="sans">Generated!</div>'
+})
+}
+document.getElementById("gen").onclick = function() {
+  generator();
+}
+
+// Очистка кода из поля
+function clear(){
+var rez = document.getElementById("rez").innerHTML = ``;
+Toast.fire({
+  icon: 'success',
+  title: '<div class="sans">Cleared!</div>'
+})
+}
+document.getElementById("clear").onclick = function clickclear() {
+  clear();
+}
+
+// Копирование кода из поля
+
+function copy(){
+   var copyText = document.getElementById("rez");
+   copyText.select();
+   document.execCommand("copy");
+Toast.fire({
+  icon: 'success',
+  title: '<div class="sans">Copied!</div>'
+})
+}
+document.getElementById("copy").onclick = function clickcopy() {
+  copy();
+} */
+// Создание отдельных компонентов отображаемых на сайте
+	const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+	const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+	const listEl = document.querySelector('.mdc-drawer .mdc-list');
+	topAppBar.listen('MDCTopAppBar:nav', () => {
+	  drawer.open = !drawer.open;
+	});
+  const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.type-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.code-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.hand-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.num-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.name-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.edge-name-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.node-name-field'));
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+</script>
+ </body>
+ </html>
+ <style>
+.icons {
+text-decoration: none;
+color: white;
+}
+.app-bar {
+  position: absolute;
+}
+  	.inline {
+    float: left;
+    center;}
+@media screen and (width:360px) {
+ 	.first {margin-left: 10px}
+ 	.second {margin-left: 15px}
+ 	.three {margin-left: 25px}
+  	.coord {width: 100px}
+  	.nam {width: 150px}
+}
+@media screen and (min-width:361px) and (max-width: 1080px) {
+ 	.first {margin-left: 10px}
+ 	.second {margin-left: 15px}
+ 	.four {margin-left: 25px}
+ 	.three {margin-left: 25px}
+  	.coord {width: 110px}
+  	.nam {width: 165px}
+}
+.
+ 	.gener {margin-down:0px}
+input[type=file]::-webkit-file-upload-button {
+  line-height:5px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: #6200ED;
+}
+  .sans {
+  font-family: sans-serif;
+  text-weight: 700;
+}
+  	.adding {
+  margin-left: 92px;
+  margin-top: 0px;
+  }
+  	.copying {
+  margin-left: 25px;
+  ]
+
+     .none {
+   float: none;
+   } 
+</style>
