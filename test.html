@@ -443,6 +443,8 @@ document.getElementById("copy").onclick = function clickcopy() {
   mdc.textField.MDCTextField.attachTo(document.querySelector('.y-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
 
+mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
+
 const select = new MDCSelect(document.querySelector('.mdc-select'));
 
 select.listen('MDCSelect:change', () => {
