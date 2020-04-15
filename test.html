@@ -345,8 +345,7 @@ const Toast = Swal.mixin({
 //      DarkMode.toggleMode()
 //    }
 // Система калькулирования и генерации кода
-mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
-const select = new MDCSelect(document.querySelector('.mdc-select'));
+const select = new mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
 function generator(){
   var x = parseInt(document.getElementById("xgen").value);
   var y = parseInt(document.getElementById("ygen").value);
