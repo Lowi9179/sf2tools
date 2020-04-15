@@ -219,22 +219,7 @@
 </div>
 
 <div class="none">
-<label class="type-field mdc-text-field nam three">
-  <div class="mdc-text-field__ripple"></div>
-  <input id="typegen" class="mdc-text-field__input" value="MacroNode" type="text"
-         aria-labelledby="type-label-id"
-         aria-controls="type-helper-id"
-         aria-describedby="type-helper-id">
-  <span class="mdc-floating-label" id="type-label-id">Node type</span>
-  <div class="mdc-line-ripple"></div>
-</label>
-<div class="mdc-text-field-helper-line second">
-  <div class="mdc-text-field-helper-text second" id="type-helper-id" aria-hidden="true">node/macronode</div>
-</div>
-</div>
-</div>
-
-<div class="mdc-select">
+<div class="mdc-select nam three">
   <div class="mdc-select__anchor demo-width-class">
     <i class="mdc-select__dropdown-icon"></i>
     <div class="mdc-select__selected-text"></div>
@@ -246,16 +231,18 @@
     <ul class="mdc-list">
       <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true"></li>
       <li class="mdc-list-item" data-value="grains">
-        Bread, Cereal, Rice, and Pasta
+        Ebat
       </li>
       <li class="mdc-list-item" data-value="vegetables">
-        Vegetables
+        kopat
       </li>
       <li class="mdc-list-item" data-value="fruit">
         Fruit
       </li>
     </ul>
   </div>
+</div>
+</div>
 </div>
 
 <div class="center">
@@ -358,6 +345,8 @@ const Toast = Swal.mixin({
 //      DarkMode.toggleMode()
 //    }
 // Система калькулирования и генерации кода
+mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
+const select = new MDCSelect(document.querySelector('.mdc-select'));
 function generator(){
   var x = parseInt(document.getElementById("xgen").value);
   var y = parseInt(document.getElementById("ygen").value);
@@ -365,7 +354,6 @@ function generator(){
   var name = document.getElementById("namegen").value;
   var number = parseInt(document.getElementById("numgen").value);
   var hand = parseInt(document.getElementById("handgen").value);
-  var type = document.getElementById("typegen").value;
   var lcc1 = z / 50;
   var lcc2 = (x + 150) / 50;
   var lcc4 = (y - 150) / 100;
@@ -378,18 +366,18 @@ var chbox2;
 chbox2=document.getElementById('checkbox-2');
   if (chbox.checked && chbox2.checked)
   {
-   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
   }
   else if (chbox.checked)
   {
-   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
     }
   else if (chbox2.checked)
   {
-   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`; 
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`; 
   }
   else {
-   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="`+type+`"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
 }
 Toast.fire({
   icon: 'success',
@@ -442,14 +430,6 @@ document.getElementById("copy").onclick = function clickcopy() {
   mdc.textField.MDCTextField.attachTo(document.querySelector('.z-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.y-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
-
-mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
-
-const select = new MDCSelect(document.querySelector('.mdc-select'));
-
-select.listen('MDCSelect:change', () => {
-  alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
-});
 </script>
  </body>
  </html>
