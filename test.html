@@ -204,17 +204,23 @@
 
 <div class="center">
 <div class="inline">
-<label class="hand-field mdc-text-field nam name first">
-  <div class="mdc-text-field__ripple"></div>
-  <input id="handgen" class="mdc-text-field__input" value="1" type="number"
-         aria-labelledby="hand-label-id"
-         aria-controls="hand-helper-id"
-         aria-describedby="hand-helper-id">
-  <span class="mdc-floating-label" id="hand-label-id">Hand number</span>
-  <div class="mdc-line-ripple"></div>
-</label>
-<div class="mdc-text-field-helper-line second">
-  <div class="mdc-text-field-helper-text second" id="hand-helper-id" aria-hidden="true">enter number</div>
+<div class="mdc-select mdc-select-hand">
+  <div class="mdc-select__anchor nam name first">
+    <i class="mdc-select__dropdown-icon"></i>
+    <div class="mdc-select__selected-text"></div>
+    <span class="mdc-floating-label">Hand Number</span>
+    <div class="mdc-line-ripple"></div>
+  </div>
+  <div class="mdc-select__menu mdc-menu mdc-menu-surface nam name first">
+    <ul class="mdc-list nam name first">
+      <li class="mdc-list-item mdc-list-item--selected nam name first" data-value="1" aria-selected="true">
+        First
+      </li>
+      <li class="mdc-list-item nam three" data-value="2">
+        Second
+      </li>
+    </ul>
+  </div>
 </div>
 </div>
 
@@ -223,13 +229,13 @@
   <div class="mdc-select__anchor nam three">
     <i class="mdc-select__dropdown-icon"></i>
     <div class="mdc-select__selected-text"></div>
-    <span class="mdc-floating-label">Pick a Food Group</span>
+    <span class="mdc-floating-label">Node Type</span>
     <div class="mdc-line-ripple"></div>
   </div>
   <div class="mdc-select__menu mdc-menu mdc-menu-surface nam three none">
     <ul class="mdc-list nam three">
       <li class="mdc-list-item mdc-list-item--selected nam three" data-value="MacroNode" aria-selected="true">
-MacroNode
+        MacroNode
       </li>
       <li class="mdc-list-item nam three" data-value="Node">
         Node
@@ -344,6 +350,7 @@ const Toast = Swal.mixin({
 //      DarkMode.toggleMode()
 //    }
 // Система калькулирования и генерации кода
+const select2 = new mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select-hand'));
 const select = new mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
 function generator(){
   var x = parseInt(document.getElementById("xgen").value);
@@ -351,7 +358,6 @@ function generator(){
   var z = parseInt(document.getElementById("zgen").value);
   var name = document.getElementById("namegen").value;
   var number = parseInt(document.getElementById("numgen").value);
-  var hand = parseInt(document.getElementById("handgen").value);
   var lcc1 = z / 50;
   var lcc2 = (x + 150) / 50;
   var lcc4 = (y - 150) / 100;
@@ -368,14 +374,14 @@ chbox2=document.getElementById('checkbox-2');
   }
   else if (chbox.checked)
   {
-   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+   var rez = document.getElementById("rez").innerHTML += `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_${select2.value}"  ChildNode2="Weapon-Node3_${select2.value}"  ChildNode3="Weapon-Node2_${select2.value}"  ChildNode4="Weapon-Node1_${select2.value}"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
     }
   else if (chbox2.checked)
   {
    var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_1"  ChildNode2="Weapon-Node3_1"  ChildNode3="Weapon-Node2_1"  ChildNode4="Weapon-Node1_1"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`+`<`+name+`2_`+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_2"  ChildNode2="Weapon-Node3_2"  ChildNode3="Weapon-Node2_2"  ChildNode4="Weapon-Node1_2"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`; 
   }
   else {
-   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_`+hand+`"  ChildNode2="Weapon-Node3_`+hand+`"  ChildNode3="Weapon-Node2_`+hand+`"  ChildNode4="Weapon-Node1_`+hand+`"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
+   var rez = document.getElementById("rez").innerHTML = `<`+name+number+` Type="${select.value}"  X="`+x+`" Y="`+y+`" Z="`+z+`"  Mass=""  Fixed="0"  Visible="1"  NodesCount="4"  ChildNode1="Weapon-Node4_${select2.value}"  ChildNode2="Weapon-Node3_${select2.value}"  ChildNode3="Weapon-Node2_${select2.value}"  ChildNode4="Weapon-Node1_${select2.value}"  LCC1="`+lcc1.toFixed(2)+`" LCC2="`+lcc2.toFixed(2)+`" LCC3="`+lcc3.toFixed(2)+`" LCC4="`+lcc4.toFixed(2)+`" />\n`;
 }
 Toast.fire({
   icon: 'success',
@@ -421,7 +427,6 @@ document.getElementById("copy").onclick = function clickcopy() {
 	});
   const topAppBarElement = document.querySelector('.mdc-top-app-bar');
   mdc.textField.MDCTextField.attachTo(document.querySelector('.code-field'));
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.hand-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.num-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.name-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.z-field'));
