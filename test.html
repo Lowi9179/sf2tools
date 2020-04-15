@@ -219,8 +219,8 @@
 </div>
 
 <div class="none">
-<div class="mdc-select three">
-  <div class="mdc-select__anchor nam">
+<div class="mdc-select">
+  <div class="mdc-select__anchor nam three">
     <i class="mdc-select__dropdown-icon"></i>
     <div class="mdc-select__selected-text"></div>
     <span class="mdc-floating-label">Pick a Food Group</span>
@@ -231,13 +231,13 @@
     <ul class="mdc-list">
       <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true"></li>
       <li class="mdc-list-item" data-value="grains">
-        Bread
+        Piska
       </li>
       <li class="mdc-list-item" data-value="vegetables">
-        Vegetables
+        Hui
       </li>
       <li class="mdc-list-item" data-value="fruit">
-        Fruit
+        Chlen
       </li>
     </ul>
   </div>
@@ -345,7 +345,6 @@ const Toast = Swal.mixin({
 //      DarkMode.toggleMode()
 //    }
 // Система калькулирования и генерации кода
-mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
 const select = new MDCSelect(document.querySelector('.mdc-select'));
 function generator(){
   var x = parseInt(document.getElementById("xgen").value);
@@ -429,6 +428,8 @@ document.getElementById("copy").onclick = function clickcopy() {
   mdc.textField.MDCTextField.attachTo(document.querySelector('.z-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.y-field'));
   mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+
+mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
 </script>
  </body>
  </html>
