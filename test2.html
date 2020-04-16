@@ -1,0 +1,218 @@
+<html>
+	<head>
+<!-- Мета-строки и подключение библиотек -->
+        <title>SF2 Tools - Node Tool</title>
+	    <meta name="theme-color" content="#6200ED">
+	    <link rel="icon" type="image/png" href="logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+	    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    </head>
+    <body>
+    	
+  <aside class="mdc-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__header">
+    <h3 class="mdc-drawer__title">SF2 Tools</h3>
+    <h6 class="mdc-drawer__subtitle">A tool pack for a game</h6>
+  </div>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+      <h6 class="mdc-list-group__subheader">Model Tools</h6>
+      <a class="mdc-list-item mdc-list-item--activated" href="index.html" aria-current="page">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Node Tool</span>
+      </a>
+      <a class="mdc-list-item" href="edges.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Edge Tool</span>
+      </a>
+      <a class="mdc-list-item" href="capsules.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Capsule Tool</span>
+      </a>
+      <a class="mdc-list-item" href="triangles.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Triangle Tool</span>
+      </a>
+
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">Stages Tools</h6>
+      <a class="mdc-list-item" href="template.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Template Tool</span>
+      </a>
+      <a class="mdc-list-item" href="fight.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Fight Tool</span>
+      </a>
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">List Tools</h6>
+      <a class="mdc-list-item" href="equipment.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Equipment Tool</span>
+      </a>
+      <a class="mdc-list-item" href="consumable.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Consumable Tool</span>
+      </a>
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">Perks Tools</h6>
+      <a class="mdc-list-item" href="perk.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Perk Tool</span>
+      </a>
+      <a class="mdc-list-item" href="trigger.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Trigger Tool</span>
+      </a>
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">Users Tools</h6>
+      <a class="mdc-list-item" href="item.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Item Tool</span>
+      </a>
+      <a class="mdc-list-item" href="trigger.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Fight Visible Tool</span>
+      </a>
+      <hr class="mdc-list-divider">
+      <h6 class="mdc-list-group__subheader">Other Tools</h6>
+      <a class="mdc-list-item" href="forge.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Forge Tool</span>
+      </a>
+      <a class="mdc-list-item" href="trigger.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Moves Tool</span>
+      </a>
+      <a class="mdc-list-item" href="localisation.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Localisation Tool</span>
+      </a>
+      <a class="mdc-list-item" href="plist.html">
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">launch</i>
+        <span class="mdc-list-item__text">Plist Tool</span>
+      </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+  
+  <div class="mdc-drawer-app-content">
+  	
+<header class="mdc-top-app-bar mdc-top-app-bar--short" id="app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" href="#"><div class="icons">menu</div></button>
+      <span class="mdc-top-app-bar__title">SF2 Tools</span>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="About" href="about.html"><a class="icons" href="about.html">info</a></button>
+    </section>
+  </div>
+</header>
+    <main class="mdc-top-app-bar--fixed-adjust">
+<!-- Текстовые поля -->
+
+<center>
+	<div class="mdc-text-field mdc-text-field--with-trailing-icon">
+  <i class="material-icons mdc-text-field__icon">visibility</i>
+  <input class="mdc-text-field__input" id="text-field-hero-input">
+  <div class="mdc-line-ripple"></div>
+  <label for="text-field-hero-input" class="mdc-floating-label">Passkey</label>
+    </div>
+</center>
+
+<!-- Кнопка генерации -->
+
+    </main>
+      </div>
+<script src="darkmode.js"></script> 
+<script>
+// Генерация тоста
+  var options = {
+    light: "light.css",
+    dark: "dark.css",
+    startAt: "01:00",
+    endAt: "23:00",
+    checkSystemScheme: true,
+    saveOnToggle: true
+  };
+  var DarkMode = new DarkMode(options);
+/*
+function copy(){
+   var copyText = document.getElementById("rez");
+   copyText.select();
+   document.execCommand("copy");
+}
+document.getElementById("copy").onclick = function clickcopy() {
+  copy();
+} */
+// Создание отдельных компонентов отображаемых на сайте
+	const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+	const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+	const listEl = document.querySelector('.mdc-drawer .mdc-list');
+	topAppBar.listen('MDCTopAppBar:nav', () => {
+	  drawer.open = !drawer.open;
+	});
+  const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+</script>
+ </body>
+ </html>
+ <style>
+.icons {
+text-decoration: none;
+color: white;
+}
+.app-bar {
+  position: absolute;
+}
+  	.inline {
+    float: left;
+    center;}
+@media screen and (width:360px) {
+ 	.first {margin-left: 10px}
+ 	.second {margin-left: 15px}
+ 	.three {margin-left: 25px}
+  	.coord {width: 100px}
+  	.nam {width: 150px}
+}
+@media screen and (min-width:361px) and (max-width: 1080px) {
+ 	.first {margin-left: 10px}
+ 	.second {margin-left: 15px}
+ 	.four {margin-left: 25px}
+ 	.three {margin-left: 25px}
+  	.coord {width: 110px}
+  	.nam {width: 165px}
+}
+.
+ 	.gener {margin-down:0px}
+input[type=file]::-webkit-file-upload-button {
+  line-height:5px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: #6200ED;
+}
+  .sans {
+  font-family: sans-serif;
+  text-weight: 700;
+}
+  	.adding {
+  margin-left: 92px;
+  margin-top: 0px;
+  }
+  	.copying {
+  margin-left: 25px;
+  ]
+
+     .none {
+   float: none;
+   } 
+</style>
